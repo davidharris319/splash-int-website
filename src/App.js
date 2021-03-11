@@ -5,6 +5,7 @@ import Header from "./components/header";
 import Banner from "./components/banner";
 import Cases from "./components/cases";
 import IntroOverlay from "./components/introOverlay";
+import Banner2 from "./components/banner2";
 
 function App() {
   useEffect(() => {
@@ -56,6 +57,7 @@ function App() {
       <Header />
       <Banner />
       <Cases />
+      <Banner2 />
     </div>
   );
 }
