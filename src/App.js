@@ -25,6 +25,10 @@ function App() {
           <Route exact path='/about'>
             <AboutPage/>
           </Route> 
+          <Route exact path='/new-customer' component={() => {
+            window.location.href = 'http://splash.remotecatalog.com/getNewClient.php';
+            return null;
+          }}/>
         </Switch>
       </Router>
     </div>
