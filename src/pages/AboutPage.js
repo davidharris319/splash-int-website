@@ -27,9 +27,6 @@ function AboutPage() {
           
           <Link to='/' style={{ textDecoration: 'none'}}>Back to Home Page</Link>
         </div>
-        
-
-
       </div>
 
     </div>
