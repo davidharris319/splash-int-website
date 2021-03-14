@@ -1,0 +1,51 @@
+@import "../breakpoints.scss";
+
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 800px;
+  margin: 0 auto;
+  width: 90%;
+  text-align: center;
+  @include media("<=1000px") {
+    display: block;
+    margin: 50px auto;
+    width: 100%;
+  }
+  h1,
+  h3 {
+    text-align: center;
+  }
+  .splash-map {
+    border-radius: 10px;
+    padding-right: 10%;
+    margin-top: 0;
+    align-items: center;
+    border-radius: 10px;
+    max-width: 50%;
+    @include media("<=1000px") {
+      padding-right: 0;
+      max-width: 85%;
+    }
+    @include media("<=500px") {
+      padding-right: 0;
+      max-width: 85%;
+    }
+  }
+  .contact-box {
+    max-width: 600px;
+    @include media("<=1000px") {
+      margin: 50px auto;
+      width: 90%;
+    }
+    .column {
+      float: left;
+      width: 50%;
+    }
+    button {
+      margin-top: 25px;
+      background: #c1d8f0;
+    }
+  }
+}
