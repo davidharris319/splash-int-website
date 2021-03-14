@@ -1,11 +1,23 @@
-.about {
-  position: relative;
+.about-container {
+  width: 90%;
+  margin: 0 auto;
+  height: 100%;
+}
+.about-background {
+  display: flex;
+  margin-left: auto;
   margin-top: 40px;
   background: url("../../assets/wedding_bank.jpg");
   background-repeat: no-repeat;
-  background-size: 80%;
+  background-size: 100%;
   min-height: 800px;
-  h2 {
-    text-align: center;
+  text-align: center;
+  .text-box {
+    background: #ffffff;
+    max-width: 520px;
+    max-height: 300px;
+    margin: auto;
+    padding: 38px 20px;
+    border-radius: 5px;
   }
 }

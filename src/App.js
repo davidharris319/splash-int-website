@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
 import "./styles/App.scss";
-import {BrowserRouter, Route, Switch } from 'react-router-dom';
+import {BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import HomePage from "./pages/HomePage";
+import AboutPage from "./pages/AboutPage";
 import Header from "./components/header";
-import Cases2 from "./components/cases2";
-import About from "./components/about";
-import AboutPage from "./pages/AboutPage/AboutPage";
+
 
 function App() {
   useEffect(() => {
@@ -17,16 +17,16 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <Cases2 />
-      <About/>
-      <BrowserRouter>
+      <Router>
         <Switch>
-          <Route exact path='/about' render={({history}) => <AboutPage
-          history={history}
-          />  
-        }/>
+          <Route exact path='/'>
+            <HomePage/>
+          </Route>
+          <Route exact path='/about'>
+            <AboutPage/>
+          </Route> 
         </Switch>
-      </BrowserRouter>
+      </Router>
     </div>
   );
 }
