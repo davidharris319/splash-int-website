@@ -8,7 +8,10 @@ const NewCustomer = () => {
     <section className="new-customer-container">
       <img src={worldMap} alt="World Map"/>
       <div className="text-box">
-          Thank you for your interest in Splash. Our products may only be bought wholesale by trade businesses. 
+
+          <h1>Your trusted leader in the giftware industry to provide the most modern selection home decor, giftware and more. </h1>
+          <br/><br/>
+          Thank you for your interest in Splash. Our products may only be bought wholesale by approved trade businesses. 
           <br/><br/>
           Interested in becoming a dealer? Apply today to shop the entire product line, view prices and easily order online!
           <br/><br/>
