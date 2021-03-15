@@ -4,8 +4,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 800px;
-  margin: 0 auto;
+  min-height: 450px;
+  margin: 0 auto 20px auto;
   width: 90%;
   text-align: center;
   @include media("<=1000px") {

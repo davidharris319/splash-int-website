@@ -1,0 +1,33 @@
+@import "../breakpoints.scss";
+
+.video-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin-top: 25px;
+  .iframe-container {
+    display: block;
+    margin-left: auto;
+    position: relative;
+    width: 100%;
+    @include media("<=910px") {
+      width: 90%;
+      min-width: 300px;
+      margin-left: 5%;
+    }
+    iframe {
+      position: absolute;
+      margin-left: auto;
+      margin-right: auto;
+      left: 0;
+      right: 0;
+      text-align: center;
+      padding-left: 0;
+      max-width: 780px;
+      max-height: 487px;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
