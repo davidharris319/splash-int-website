@@ -1,10 +1,10 @@
 import React, { Component, useEffect, useState } from "react";
-import { Route } from "react-router-dom";
+import {BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import "./styles/App.scss";
-
+import HomePage from "./pages/HomePage";
+import AboutPage from "./pages/AboutPage";
 import Header from "./components/header";
 import Navigation from "./components/navigation";
-
 import About from "./components/about";
 
 //pages
@@ -25,8 +25,6 @@ function debounce(fn, ms) {
     }, ms);
   };
 }
-
-//routes
 
 function App() {
   const [dimensions, setDimensions] = useState({
@@ -52,9 +50,9 @@ function App() {
   }, []);
 
   return (
-    <>
+     <>
       <Header dimensions={dimensions} />
-      <div className="App">
+       <div className="App">
         {routes.map(({ path, Component }) => (
           <Route key={path} exact path={path}>
             <Component />
@@ -62,6 +60,20 @@ function App() {
         ))}
       </div>
       <Navigation />
+      <Router>
+        <Switch>
+          <Route exact path='/'>
+            <HomePage/>
+          </Route>
+          <Route exact path='/about'>
+            <AboutPage/>
+          </Route> 
+          <Route exact path='/new-customer' component={() => {
+            window.location.href = 'http://splash.remotecatalog.com/getNewClient.php';
+            return null;
+          }}/>
+        </Switch>
+      </Router>
     </>
   );
 }
