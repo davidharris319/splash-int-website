@@ -18,9 +18,8 @@ const content = [
     userProfile: "https://i.imgur.com/JSW6mEk.png",
   },
   {
-    title: "Tortor Dapibus Commodo Aenean Quam",
-    description:
-      "Nullam id dolor id nibh ultricies vehicula ut id elit. Cras mattis consectetur purus sit amet fermentum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec sed odio dui.",
+    title: "FUN IN THE SUN",
+    description: "",
     button: "Discover",
     image: garden,
     user: "Erich Behrens",

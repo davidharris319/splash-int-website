@@ -1,22 +1,65 @@
-import React, { useEffect } from "react";
-import "./styles/App.scss";
+import React, { Component, useEffect, useState } from "react";
 import {BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import "./styles/App.scss";
 import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
 import Header from "./components/header";
+import Navigation from "./components/navigation";
+import About from "./components/about";
 
+//pages
+import Home from "./pages/home";
+
+const routes = [
+  { path: "/", name: "Home", Component: Home },
+  { path: "/about", name: "About", Component: About },
+];
+
+function debounce(fn, ms) {
+  let timer;
+  return () => {
+    clearTimeout(timer);
+    timer = setTimeout(() => {
+      timer = null;
+      fn.apply(this, arguments);
+    }, ms);
+  };
+}
 
 function App() {
+  const [dimensions, setDimensions] = useState({
+    height: window.innerHeight,
+    width: window.innerWidth,
+  });
+
   useEffect(() => {
-    let vh = window.innerHeight * 0.01;
+    let vh = dimensions.height * 0.01;
     document.documentElement.style.setProperty("--vh", `${vh}px`);
 
-    //timeline
+    const debouncedHandleResize = debounce(function handleResize() {
+      setDimensions({
+        height: window.innerHeight,
+        width: window.innerWidth,
+      });
+    }, 1000);
+
+    window.addEventListener("resize", debouncedHandleResize);
+    return () => {
+      window.addEventListener("resize", debouncedHandleResize);
+    };
   }, []);
 
   return (
-    <div className="App">
-      <Header />
+     <>
+      <Header dimensions={dimensions} />
+       <div className="App">
+        {routes.map(({ path, Component }) => (
+          <Route key={path} exact path={path}>
+            <Component />
+          </Route>
+        ))}
+      </div>
+      <Navigation />
       <Router>
         <Switch>
           <Route exact path='/'>
@@ -31,7 +74,7 @@ function App() {
           }}/>
         </Switch>
       </Router>
-    </div>
+    </>
   );
 }
 
