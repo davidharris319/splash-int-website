@@ -7,6 +7,7 @@ import "./styles.css";
 
 import foodent from "../assets/food-ent.jpg";
 import garden from "../assets/garden.jpg";
+import framePicture from "../assets/frames.jpg";
 
 const content = [
   {
@@ -14,25 +15,18 @@ const content = [
     description: "",
     button: "Shop Now",
     image: foodent,
-    user: "Luan Gjokaj",
-    userProfile: "https://i.imgur.com/JSW6mEk.png",
   },
   {
     title: "FUN IN THE SUN",
     description: "",
     button: "Discover",
     image: garden,
-    user: "Erich Behrens",
-    userProfile: "https://i.imgur.com/0Clfnu7.png",
   },
   {
-    title: "Phasellus volutpat metus",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Duis mollis, est non commodo luctus, nisi erat porttitor ligula.",
-    button: "Buy now",
-    image: "https://i.imgur.com/DvmN8Hx.jpg",
-    user: "Bruno Vizovskyy",
-    userProfile: "https://i.imgur.com/4KeKvtH.png",
+    title: "A frame for every occasion.",
+    description: "",
+    button: "View Catalogue",
+    image: framePicture,
   },
 ];
 
