@@ -15,8 +15,8 @@ const NewCustomer = () => {
           <br/><br/>
           Interested in becoming a dealer? Apply today to shop the entire product line, view prices and easily order online!
           <br/><br/>
-          <Link to='/new-customer' style={{ textDecoration: 'none'}}><button>
-          Apply Now </button></Link>
+          <a href="http://splash.remotecatalog.com/getNewClient.php" style={{ textDecoration: 'none'}}><button>
+          Apply Now </button></a>
       </div>
 
     </section>

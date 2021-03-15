@@ -1,18 +1,17 @@
 import React, { Component, useEffect, useState } from "react";
 import {BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import "./styles/App.scss";
-import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
 import Header from "./components/header";
 import Navigation from "./components/navigation";
-import About from "./components/about";
+import About from "./components/About";
 
 //pages
 import Home from "./pages/home";
 
 const routes = [
   { path: "/", name: "Home", Component: Home },
-  { path: "/about", name: "About", Component: About },
+  { path: "/about", name: "About", Component: AboutPage },
 ];
 
 function debounce(fn, ms) {
@@ -60,20 +59,6 @@ function App() {
         ))}
       </div>
       <Navigation />
-      <Router>
-        <Switch>
-          <Route exact path='/'>
-            <HomePage/>
-          </Route>
-          <Route exact path='/about'>
-            <AboutPage/>
-          </Route> 
-          <Route exact path='/new-customer' component={() => {
-            window.location.href = 'http://splash.remotecatalog.com/getNewClient.php';
-            return null;
-          }}/>
-        </Switch>
-      </Router>
     </>
   );
 }
